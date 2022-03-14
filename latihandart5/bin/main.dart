@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dosen.dart';
 import 'mahasiswa.dart';
 import 'staff.dart';
+import 'package:dcli/dcli.dart';
 
 void main() {
   int gajidasar;
@@ -37,6 +38,7 @@ void main() {
         print("3. Melihat Jumlah SKS Diambil");
         print("4. Input IPS");
         print("5. Melihat IPK");
+        print("0. Exit");
         stdout.write("Choice : ");
         String? temp = stdin.readLineSync();
         tempch = int.parse(temp!);
@@ -63,6 +65,7 @@ void main() {
         } else if (tempch == 5) {
           print("IPK : ${mahasiswa1.ipk}");
         }
+        Terminal().clearScreen();
       } while (tempch != 0);
     } else if (choice == 2) {
       do {
@@ -170,7 +173,9 @@ void main() {
             }
           } while (tempch2 != 0);
         }
+        Terminal().clearScreen();
       } while (tempch != 0);
     }
+    Terminal().clearScreen();
   } while (choice != 0);
 }
