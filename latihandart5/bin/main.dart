@@ -55,6 +55,8 @@ void main() {
           print("Status Berhasil dirubah ${mahasiswa1.statusMahasiswa()}");
         } else if (tempch == 3) {
           print("Jumlah Total SKS Diambil : ${mahasiswa1.sks}");
+          stdout.write("Press Enter to continue..");
+          stdin.readLineSync();
         } else if (tempch == 4) {
           double tempips;
           stdout.write("Input IPS : ");
@@ -64,6 +66,8 @@ void main() {
           mahasiswa1.ips = tempips;
         } else if (tempch == 5) {
           print("IPK : ${mahasiswa1.ipk}");
+          stdout.write("Press Enter to continue..");
+          stdin.readLineSync();
         }
         Terminal().clearScreen();
       } while (tempch != 0);
@@ -91,10 +95,14 @@ void main() {
             tempch2 = int.parse(temp!);
             if (tempch2 == 1) {
               print("SKS Diampu : ${dosenLB1.sks}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 2) {
               int totalPenghasilan = dosenLB1.gajiSKS(dosenLB1.sks);
               dosenLB1.gaji = totalPenghasilan;
               print("Total Penghasilan : ${dosenLB1.gaji}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 3) {
               stdout.write("Input Jumlah SKS Diampu : ");
               String? temp = stdin.readLineSync();
@@ -114,11 +122,15 @@ void main() {
             tempch2 = int.parse(temp!);
             if (tempch2 == 1) {
               print("SKS Diampu : ${dosenTamu1.sks}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 2) {
               int totalPenghasilan = dosenTamu1.gajiSKS(dosenTamu1.sks);
               totalPenghasilan += dosenTamu1.tunjangan();
               dosenTamu1.gaji = totalPenghasilan;
               print("Total Penghasilan : ${dosenTamu1.gaji}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 3) {
               stdout.write("Input Jumlah SKS Diampu : ");
               String? temp = stdin.readLineSync();
@@ -138,12 +150,16 @@ void main() {
             tempch2 = int.parse(temp!);
             if (tempch2 == 1) {
               print("SKS Diampu : ${dosenTetap1.sks}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 2) {
               int totalPenghasilan = dosenTetap1.gajiSKS(dosenTetap1.sks);
               totalPenghasilan += dosenTetap1.tunjangan();
               totalPenghasilan += gajidasar;
               dosenTetap1.gaji = totalPenghasilan;
               print("Total Penghasilan : ${dosenTetap1.gaji}");
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 3) {
               stdout.write("Input Jumlah SKS Diampu : ");
               String? temp = stdin.readLineSync();
@@ -163,8 +179,12 @@ void main() {
             tempch2 = int.parse(temp!);
             if (tempch2 == 1) {
               staff1.absen();
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 2) {
               staff1.ambilJatahCuti();
+              stdout.write("Press Enter to continue..");
+              stdin.readLineSync();
             } else if (tempch2 == 3) {
               int totalGaji = gajidasar;
               totalGaji += staff1.tunjangan();
