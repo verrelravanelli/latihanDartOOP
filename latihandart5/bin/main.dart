@@ -48,7 +48,13 @@ void main() {
           stdout.write("Input SKS : ");
           String? temp = stdin.readLineSync();
           tempsks = int.parse(temp!);
-          mahasiswa1.sks = tempsks;
+          if (tempsks < 2 || tempsks > 24) {
+            print("sks tidak boleh kurang dari 2 atau lebih dari 24");
+            stdout.write("Press Enter to continue..");
+            stdin.readLineSync();
+          } else {
+            mahasiswa1.sks = tempsks;
+          }
         } else if (tempch == 2) {
           print("Status Saat Ini : ${mahasiswa1.statusMahasiswa()}");
           mahasiswa1.status = mahasiswa1.changeStatusMahasiswa();
